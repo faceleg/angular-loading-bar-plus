@@ -27,5 +27,6 @@
   },
   "resolutions": {
     "angular": "~1.2.23"
-  }
+  },
+  "version": "0.9.0"
 }
