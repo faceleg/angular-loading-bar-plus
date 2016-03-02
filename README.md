@@ -1,5 +1,7 @@
-angular-loading-bar
+angular-loading-bar-plus
 ===================
+
+*Maintained fork of angular-loading-bar*
 
 The idea is simple: Add a loading bar / progress bar whenever an XHR request goes out in angular.  Multiple requests within the same time period get bundled together such that each response increments the progress bar by the appropriate amount.
 
