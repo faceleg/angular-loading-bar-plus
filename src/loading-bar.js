@@ -129,8 +129,7 @@ angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
         'response': writeHandler,
 
         'responseError': function(rejection) {
-          var rejection = writeHandler(rejection);
-          return $q.reject(rejection);
+          return $q.reject(writeHandler(rejection));
         }
       };
     }];
@@ -195,11 +194,11 @@ angular.module('cfp.loadingBar', [])
 
         $rootScope.$broadcast('cfpLoadingBar:started');
         started = true;
-        
+
         var $children = $parent.children();
 
         if (includeBar) {
-          
+
           $animate.enter(loadingBarContainer, $parent, $children.length > 0 ? $children[$children.length - 1] : null);
         }
 
